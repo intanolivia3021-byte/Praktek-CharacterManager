@@ -1,4 +1,3 @@
-
 # Character Manager - Sprint #2
 
 ## 1. Deskripsi Proyek
@@ -226,3 +225,71 @@ tanpa harus mengubah kode warna.
 
 https://docs.google.com/document/d/17EJiQUqYiMShUtL-EQUEj8LJuBsanNE5AzbmOW40o1s/edit?usp=sharing
 
+
+# Character Manager – TP12
+### 1. Deskripsi
+
+Character Manager merupakan aplikasi Java Swing untuk menampilkan data karakter dengan berbagai level dan role. Pada TP12, aplikasi dikembangkan menggunakan Layout Manager agar tampilannya lebih rapi dan responsif.
+
+### 2. Implementasi Layout
+
+Layout yang digunakan:
+
+- **BorderLayout:** Mengatur empat wilayah utama aplikasi.
+- **GridLayout:** Menyusun kartu karakter dan statistik.
+- **BoxLayout:** Menyusun legenda role secara vertikal.
+- **JScrollPane:** Membuat daftar karakter dapat digulir.
+
+### 3. Wireframe
+
+```text
++--------------------------------------+
+|          CHARACTER MANAGER           |
+|       Statistik Karakter             |
++-------------------------+------------+
+|                         |  LEGENDA   |
+|    DAFTAR KARAKTER      |  Warrior   |
+|                         |  Mage      |
+|    [Arthur] [Merlin]    |  Archer    |
+|    [Robin]  [Luna]      |  Healer    |
+|                         |            |
++-------------------------+------------+
+| Status Aplikasi                  v0.5|
++--------------------------------------+
+```
+
+### 4. Screenshot Aplikasi
+
+**A. Ukuran Awal**
+![alt text](<Screenshot 2026-11-06 000950.png>)
+
+**B. Ukuran Lebar**
+![alt text](<Screenshot 2026-11-06 002911.png>)
+
+**C. Ukuran Kecil**
+![alt text](<Screenshot 2026-11-06 003009.png>)
+
+## 5. Pengamatan Resize
+
+| Kondisi | Hasil |
+|---|---|
+| Ukuran awal | Komponen tampil rapi |
+| Diperbesar | Area daftar lebih luas |
+| Diperkecil | Scrollbar muncul |
+
+## 6. Panel Tambahan
+
+Panel statistik menggunakan GridLayout 2x2 untuk menampilkan total karakter, rata-rata level, jumlah role, dan level tinggi.
+
+GridLayout dipilih karena susunannya teratur. FlowLayout tidak dipilih karena susunan statistik dapat berpindah baris.
+
+## 7. Struktur Panel
+
+MainPanel menggunakan BorderLayout sebagai panel utama. Header berisi judul dan statistik. Bagian tengah menampilkan kartu karakter melalui JScrollPane, bagian kanan menampilkan legenda, dan bagian bawah menampilkan status aplikasi.
+
+## 8. Analisis MVC
+
+Model mengelola data karakter, View menampilkan antarmuka, dan Controller mengatur proses antara keduanya. Pemisahan ini membuat program lebih mudah dikembangkan dan diperbaiki.
+
+## 9. Google Docs
+https://docs.google.com/document/d/1bSg2ASZ5kduFmzXSO1ytiiV37mv5lkTty9xxUKiANzA/edit?usp=sharing
